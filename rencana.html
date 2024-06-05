@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rencana Kunjungan</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    #rencana {
+      padding: 60px 0;
+    }
+    .timeline {
+      position: relative;
+      padding: 0;
+      list-style: none;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e9ecef;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #007bff;
+      border-radius: 50%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timeline-item .timeline-content {
+      position: relative;
+      width: 45%;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 4px;
+    }
+    .timeline-item .timeline-content.left {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item .timeline-content.right {
+      left: 55%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Section Rencana -->
+<section id="rencana">
+  <div class="container">
+    <div class="row mb-4">
+      <div class="col text-center">
+        <h2>Rencanakan Kunjungan Anda</h2>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <h4>Formulir Perencanaan</h4>
+        <form>
+          <div class="form-group">
+            <label for="name">Jumlah Pengunjung</label>
+            <input type="number" class="form-control" id="name" placeholder="Jumlah Pengunjung" value="1">
+          </div>
+          <div class="form-group">
+            <label for="destination">Destinasi</label>
+            <input type="text" class="form-control" id="destination" placeholder="Destinasi Kunjungan">
+          </div>
+          <div class="form-group">
+            <label for="date">Tanggal Kunjungan</label>
+            <input type="date" class="form-control" id="date">
+          </div>
+          <div class="form-group">
+            <label for="date">Jam Kunjungan</label>
+            <input type="time" class="form-control" id="date">
+          </div>
+          <button type="submit" class="btn btn-primary">Kirim</button>
+          <a href="index.html" class="btn btn-danger">Kembali</a>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h4>Timeline Kunjungan</h4>
+        <ul class="timeline p-0">
+          <li class="timeline-item d-flex flex-row-reverse">
+            <div class="timeline-content bg-light p-3 rounded">
+              <h5>Langkah 1</h5>
+              <p>Memilih destinasi tujuan Anda.</p>
+            </div>
+          </li>
+          <li class="timeline-item d-flex">
+            <div class="timeline-content bg-light p-3 rounded">
+              <h5>Langkah 2</h5>
+              <p>Menentukan tanggal kunjungan.</p>
+            </div>
+          </li>
+          <li class="timeline-item d-flex flex-row-reverse">
+            <div class="timeline-content bg-light p-3 rounded">
+              <h5>Langkah 3</h5>
+              <p>Mengisi formulir perencanaan kunjungan.</p>
+            </div>
+          </li>
+          <li class="timeline-item d-flex">
+            <div class="timeline-content bg-light p-3 rounded">
+              <h5>Langkah 4</h5>
+              <p>Mengirim formulir dan menunggu konfirmasi.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

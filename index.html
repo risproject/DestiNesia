@@ -4,44 +4,54 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DestiNesia</title>
-    <link href="/app.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/mobile.css" rel="stylesheet">
+    <link href="css/desktop.css" rel="stylesheet">
     <script src="/app.js"></script>
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
     
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg coloring fixed-top">
       <div class="container">
-          <a class="navbar-brand" href="#"><img src="icon/f-s 2.png" class="me-2 mb-1" width="18px">DestiNesia</a>
+          <a class="navbar-brand" href="#">DestiNesia</a>
           <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="bi bi-list"></i></span>
           </button>
           <div class="collapse navbar-collapse text-right" id="navbarText">
             <ul class="navbar-nav ms-auto ">
-              <li><hr class="dropdown-divider bg-white"></li>
+                <li><hr class="dropdown-divider bg-dark"></li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html#">Home</a>
+                <a class="nav-link" href="#home">Home</a>
               </li>
-                  <li><hr class="dropdown-divider bg-white"></li>
+                  <li><hr class="dropdown-divider bg-dark"></li>
               <li class="nav-item">
-                <a class="nav-link" href="#main">My Journey</a>
+                <a class="nav-link" href="#discover">Discover</a>
               </li>
-                  <li><hr class="dropdown-divider bg-white"></li>
+                  <li><hr class="dropdown-divider bg-dark"></li>
               <li class="nav-item">
-                <a class="nav-link" href="#gallery">library</a>
+                <a class="nav-link" href="rencana.html">Plan</a>
               </li>
-                  <li><hr class="dropdown-divider bg-white"></li>
+                  <li><hr class="dropdown-divider bg-dark"></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">Maps</a>
+              </li>
+                  <li><hr class="dropdown-divider bg-dark"></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery">About</a>
+              </li>
             </ul>
           </div>
       </div>
     </nav>
     <!-- akhir navbar -->
-
+    <section id="home"></section>
     <!-- Hero section -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
+      <div class="carousel-inner position-relative">
         <div class="carousel-item active">
           <img src="img/Borobudur.jpg" class="d-block w-100" alt="Borobudur">
         </div>
@@ -49,7 +59,19 @@
           <img src="img/bromo.jpg" class="d-block w-100" alt="Bromo">
         </div>
         <div class="carousel-item">
-          <img src="img/banyuwangi.jpg" class="d-block w-100" alt="Banyuwangi">
+          <img src="img/rajaA4.jpg" class="d-block w-100" alt="Banyuwangi">
+        </div>
+        <div class="carousel-item">
+          <img src="img/papua.jpg" class="d-block w-100" alt="Banyuwangi">
+        </div>
+        <!-- Search bar -->
+        <div class="container">
+          <div class="search-bar-container rounded-pill">
+            <div class="input-group">
+              <input class="form-control ms-2" type="text" placeholder="Search..." aria-label="Search example">
+              <button class="btn btn-primary rounded-pill me-2 my-2 px-4" type="button">Start</button>
+            </div>
+          </div>
         </div>
       </div>
       <button class="carousel-control-prev carousel-button" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -58,6 +80,269 @@
       </button>
     </div>
     <!-- end hero section -->
+
+    <!-- menu -->
+
+    <div class="menu">
+      <div class="container mt-4">
+        <div class="row justify-content-center">
+          <div class="col-2 col-md-2 mb-4">
+            <div class="card">
+              <img src="img/Hotel.png" class="card-img-top" alt="Image 1">
+              
+            </div>
+          </div>
+          <div class="col-2 col-md-2 mb-4">
+            <div class="card">
+              <img src="img/Cafe.png" class="card-img-top" alt="Image 2">
+              
+            </div>
+          </div>
+          <div class="col-2 col-md-2 mb-4">
+            <div class="card">
+              <img src="img/Destinasi.png" class="card-img-top" alt="Image 3">
+              
+            </div>
+          </div>
+          <div class="col-2 col-md-2 mb-4">
+            <div class="card">
+              <img src="img/Artikel.png" class="card-img-top" alt="Image 4">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- akhir menu -->
+
+    <section class="timeline_area section_padding_130">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-12 col-sm-8 col-lg-6">
+                  <!-- Section Heading-->
+                  <div class="section_heading text-center pb-4">
+                      <h3>Event Timeline</h3>
+                      <h6>Event kolaborasi yang diselenggarakan Destinesia dan pengelola wisata</h6>
+                      <div class="line"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12">
+                  <!-- Timeline Area-->
+                  <div class="apland-timeline-area">
+                      <!-- Single Timeline Content-->
+                      <div class="single-timeline-area">
+                          <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                              <p>2024</p>
+                          </div>
+                          <div class="row">
+                              <div class="col-12 col-md-6 col-lg-4">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="bi bi-bag-heart"></i></div>
+                                      <div class="timeline-text">
+                                          <h5>Judul</h5>
+                                          <h6>5 Agustus 2023</h6>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-md-6 col-lg-4">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="bi bi-balloon"></i></div>
+                                      <div class="timeline-text">
+                                          <h5>Judul</h5>
+                                          <h6>5 Agustus 2023</h6>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-md-6 col-lg-4">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="bi bi-basket"></i></div>
+                                      <div class="timeline-text">
+                                          <h5>Judul</h5>
+                                          <h6>5 Agustus 2023</h6>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Single Timeline Content-->
+                      <div class="single-timeline-area">
+                          <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                              <p>2023</p>
+                          </div>
+                          <div class="row">
+                              <div class="col-12 col-md-6 col-lg-4">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="bi bi-image-alt"></i></div>
+                                      <div class="timeline-text">
+                                          <h5>Judul</h5>
+                                          <h6>5 Agustus 2023</h6>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-md-6 col-lg-4">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="bi bi-house-door"></i></div>
+                                      <div class="timeline-text">
+                                          <h5>Judul</h5>
+                                          <h6>5 Agustus 2023</h6>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Single Timeline Content-->
+                      <div class="single-timeline-area">
+                          <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                              <p>2022</p>
+                          </div>
+                          <div class="row">
+                              <div class="col-12 col-md-6 col-lg-4">
+                                  <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                                      <div class="timeline-icon"><i class="bi bi-scissors"></i></div>
+                                      <div class="timeline-text">
+                                          <h5>Judul</h5>
+                                          <h6>5 Agustus 2023</h6>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="discover"></section>
+
+    <!-- Section Tile -->
+    <section id="contentdiscover">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col text-center">
+            <h2>Rekomendasi Untukmu</h2>
+            <h6>Destinasi Pilihan yang Disesuaikan Khusus untuk Anda</h6>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/Borobudur.jpg" class="card-img-top" alt="Destinasi 2">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 2</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 2.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/Dieng.jpg" class="card-img-top" alt="Destinasi 4">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 4</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 4.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/bromo.jpg" class="card-img-top" alt="Destinasi 2">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 2</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 2.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/Gunung Merapi.jpg" class="card-img-top" alt="Destinasi 3">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 3</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 3.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/Guci.jpg" class="card-img-top" alt="Destinasi 4">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 4</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 4.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Tile -->
+    <section id="contentdiscover">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col text-center">
+            <h2>Destinasi Paling Populer</h2>
+            <h6>Menjelajahi Destinasi Wisata Populer dan Ikonik, Jadikan Liburanmu Penuh Petualangan</h6>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/Borobudur.jpg" class="card-img-top" alt="Destinasi 2">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 2</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 2.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/Dieng.jpg" class="card-img-top" alt="Destinasi 4">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 4</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 4.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/bromo.jpg" class="card-img-top" alt="Destinasi 2">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 2</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 2.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/Gunung Merapi.jpg" class="card-img-top" alt="Destinasi 3">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 3</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 3.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4">
+            <div class="card">
+              <img src="img/Guci.jpg" class="card-img-top" alt="Destinasi 4">
+              <div class="card-body">
+                <h5 class="card-title">Destinasi 4</h5>
+                <p class="card-text">Deskripsi singkat mengenai destinasi 4.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
     
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
