@@ -1,131 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rencana Kunjungan</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    #rencana {
-      padding: 60px 0;
-    }
-    .timeline {
-      position: relative;
-      padding: 0;
-      list-style: none;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: #e9ecef;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 30px;
-    }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      background: #007bff;
-      border-radius: 50%;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    .timeline-item .timeline-content {
-      position: relative;
-      width: 45%;
-      padding: 20px;
-      background: #f8f9fa;
-      border-radius: 4px;
-    }
-    .timeline-item .timeline-content.left {
-      left: 0;
-      text-align: right;
-    }
-    .timeline-item .timeline-content.right {
-      left: 55%;
-    }
-  </style>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta jumlah="viewport" content="width=device-width, initial-scale=1">
+    <title>Rencana</title>
+
+    <script src="/app.js"></script>
+
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/mobile.css" rel="stylesheet">
+    <link href="css/desktop.css" rel="stylesheet">
+
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
 <body>
 
-<!-- Section Rencana -->
-<section id="rencana">
-  <div class="container">
-    <div class="row mb-4">
-      <div class="col text-center">
-        <h2>Rencanakan Kunjungan Anda</h2>
+  <!-- Section Rencana -->
+  <section id="rencana">
+    <div class="container">
+      <div class="row my-5">
+        <div class="col text-center">
+          <h2>Rencanakan Kunjungan Anda</h2>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-6">
+          <h4>Formulir Perencanaan</h4>
+          <form id="planning-form">
+            <div class="form-group mt-3">
+              <label class="mb-1" for="jumlah">Jumlah Pengunjung</label>
+              <input type="number" class="form-control" id="jumlah" placeholder="Jumlah Pengunjung" value="1" required>
+            </div>
+            <div class="form-group mt-3">
+              <label class="mb-1" for="destination">Destinasi</label>
+              <input type="text" class="form-control" id="destination" placeholder="Destinasi Kunjungan" required>
+            </div>
+            <div class="form-group mt-3">
+              <label class="mb-1" for="date">Tanggal Kunjungan</label>
+              <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="form-group my-3">
+              <label class="mb-1" for="time">Jam Kunjungan</label>
+              <input type="time" class="form-control" id="time" required>
+            </div>
+            <a href="index.html" class="btn btn-danger rounded-pill">Kembali</a>
+            <button type="submit" class="btn btn-primary rounded-pill"><i class="bi bi-send"></i> Kirim</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <ul id="todo-list" class="timeline p-0">
+          </ul>
+          <button class="btn btn-primary rounded-pill"><i class="bi bi-cloud-download"></i> Unduh</button>
+        </div>
       </div>
     </div>
-    <div class="row mb-5">
-      <div class="col-md-6">
-        <h4>Formulir Perencanaan</h4>
-        <form>
-          <div class="form-group">
-            <label for="name">Jumlah Pengunjung</label>
-            <input type="number" class="form-control" id="name" placeholder="Jumlah Pengunjung" value="1">
-          </div>
-          <div class="form-group">
-            <label for="destination">Destinasi</label>
-            <input type="text" class="form-control" id="destination" placeholder="Destinasi Kunjungan">
-          </div>
-          <div class="form-group">
-            <label for="date">Tanggal Kunjungan</label>
-            <input type="date" class="form-control" id="date">
-          </div>
-          <div class="form-group">
-            <label for="date">Jam Kunjungan</label>
-            <input type="time" class="form-control" id="date">
-          </div>
-          <button type="submit" class="btn btn-primary">Kirim</button>
-          <a href="index.html" class="btn btn-danger">Kembali</a>
-        </form>
-      </div>
-      <div class="col-md-6">
-        <h4>Timeline Kunjungan</h4>
-        <ul class="timeline p-0">
-          <li class="timeline-item d-flex flex-row-reverse">
-            <div class="timeline-content bg-light p-3 rounded">
-              <h5>Langkah 1</h5>
-              <p>Memilih destinasi tujuan Anda.</p>
-            </div>
-          </li>
-          <li class="timeline-item d-flex">
-            <div class="timeline-content bg-light p-3 rounded">
-              <h5>Langkah 2</h5>
-              <p>Menentukan tanggal kunjungan.</p>
-            </div>
-          </li>
-          <li class="timeline-item d-flex flex-row-reverse">
-            <div class="timeline-content bg-light p-3 rounded">
-              <h5>Langkah 3</h5>
-              <p>Mengisi formulir perencanaan kunjungan.</p>
-            </div>
-          </li>
-          <li class="timeline-item d-flex">
-            <div class="timeline-content bg-light p-3 rounded">
-              <h5>Langkah 4</h5>
-              <p>Mengirim formulir dan menunggu konfirmasi.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // list
+    document.getElementById('planning-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const jumlah = document.getElementById('jumlah').value;
+      const destination = document.getElementById('destination').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      
+      const visit = {
+        jumlah,
+        destination,
+        date,
+        time
+      };
+      
+      let visits = localStorage.getItem('visits');
+      if (visits) {
+        visits = JSON.parse(visits);
+      } else {
+        visits = [];
+      }
+      
+      visits.push(visit);
+      localStorage.setItem('visits', JSON.stringify(visits));
+      
+      renderVisits();
+      
+      document.getElementById('planning-form').reset();
+    });
+
+    function renderVisits() {
+      const todoList = document.getElementById('todo-list');
+      todoList.innerHTML = '';
+      
+      const visits = JSON.parse(localStorage.getItem('visits')) || [];
+      
+      visits.forEach((visit, index) => {
+        const todoItem = document.createElement('div');
+        todoItem.className = 'todo-item';
+        todoItem.innerHTML = `
+          <li class="timeline-item d-flex flex-row-reverse">
+            <div class="timeline-content p-3 rounded-4">
+              <span class="fs-6 fw-bold">Tujuan ${index + 1} </span class="fs-6 fw-bold">
+              <p class="fs-5 fw-medium">${visit.destination}</p>
+              <p>(${visit.jumlah} Orang)</p>
+              <p>${visit.date} - ${visit.time}</p>
+              <button class="btn btn-danger btn-sm" onclick="deleteVisit(${index})"><i class="bi bi-trash"></i></button>
+            </div>
+          </li>
+        `;
+        todoList.appendChild(todoItem);
+      });
+    }
+
+    function deleteVisit(index) {
+      let visits = JSON.parse(localStorage.getItem('visits')) || [];
+      visits.splice(index, 1);
+      localStorage.setItem('visits', JSON.stringify(visits));
+      renderVisits();
+    }
+
+    document.addEventListener('DOMContentLoaded', renderVisits);
+  </script>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -23,7 +23,6 @@
   pointer-events: none;
   z-index: 1;
 }
-
 .carousel-inner {
   position: relative;
   text-align: center;
@@ -58,11 +57,6 @@
   z-index: 1;
   padding-left: 180px;
 }
-@media only screen and (max-width: 575px) {
-  .single-timeline-area {
-      padding-left: 100px;
-  }
-}
 .single-timeline-area .timeline-date {
   position: absolute;
   width: 180px;
@@ -70,15 +64,8 @@
   top: 0;
   left: 0;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -ms-grid-row-align: center;
   align-items: center;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
   padding-right: 60px;
 }
@@ -94,8 +81,8 @@
 }
 .single-timeline-area .timeline-date::before {
   position: absolute;
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background-color: #0d6efd;
   content: "";
@@ -115,21 +102,16 @@
   position: relative;
   z-index: 1;
   padding: 30px 30px 25px;
-  border-radius: 6px;
   margin-bottom: 15px;
   margin-top: 15px;
-  -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
   box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
   border: 1px solid #ebebeb;
 }
 .single-timeline-area .single-timeline-content .timeline-icon {
-  -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   width: 30px;
   height: 30px;
   background-color: #0d6efd;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 30px;
   flex: 0 0 30px;
   text-align: center;
   max-width: 30px;
@@ -137,7 +119,7 @@
   margin-right: 15px;
 }
 .single-timeline-area .single-timeline-content .timeline-icon i {
-  color: #ffffff;
+  color: #F8F8F8;
   line-height: 30px;
 }
 .single-timeline-area .single-timeline-content .timeline-text h6 {
@@ -157,10 +139,6 @@
   color: #3f43fd;
 }
 .timeline_area{
-  margin-top: 150px;
-}
-
-#contentdiscover {
   margin-top: 100px;
 }
 
@@ -180,8 +158,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
-  color: white; /* Warna teks putih */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: #F8F8F8; /* Warna teks putih */
   padding: 20px;
   opacity: 0; /* Membuat card-body tidak terlihat */
   transition: opacity 0.3s; /* Transisi halus untuk opacity */
@@ -197,5 +175,51 @@
 #contentdiscover .card:hover .card-img-top {
   transform: scale(1.4);
   transition: transform 0.3s;
+}
+
+/* timeline rencana */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ebebeb;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #007bff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timeline-item .timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  border: 1px solid #ebebeb;
+  box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+}
+.timeline-item .timeline-content.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item .timeline-content.right {
+  left: 55%;
 }
 
